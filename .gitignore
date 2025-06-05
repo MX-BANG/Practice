@@ -1,0 +1,14 @@
+# Ignore system and office files
+*.docx
+*.pdf
+*.xlsx
+
+# Node.js projects
+node_modules/
+
+# Python
+__pycache__/
+
+# Environment files
+.env
+
