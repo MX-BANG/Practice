@@ -174,7 +174,21 @@ let marks1 = [88, 85, 82];
 let total1 = marks1.reduce((sum, current) => sum + current, 0);
 let average1 = total1 / marks1.length;
 
-let grade = average1 >= 90 ? "A" : average1 >= 84 ? "A-" :average1 >= 80 ? "B+" : average1 >= 75 ? "B-" : average1 >= 70 ? "C+" : "D";
+// let grade = average1 >= 90 ? "A" : average1 >= 84 ? "A-" :average1 >= 80 ? "B+" : average1 >= 75 ? "B-" : average1 >= 70 ? "C+" : "D";
+function getGrade(avg) {
+    if (avg >= 95) return "A+";
+    else if (avg >= 91) return "A";
+    else if (avg >= 87) return "A-";
+    else if (avg >= 84) return "B+";
+    else if (avg >= 79) return "B";
+    else if (avg >= 74) return "B-";
+    else if (avg >= 69) return "C+";
+    else if (avg >= 66) return "C";
+    else if (avg >= 62) return "C-";
+    else if (avg >= 60) return "D";
+    else return "F";
+}
 
+getGrade(average1);
 
-console.log(`${name1}, your average is ${average1.toFixed(2)}. You got an ${grade} grade`)
+console.log(`${name1}, your average is ${average1.toFixed(2)}. You got an ${getGrade(average1)} grade`);
