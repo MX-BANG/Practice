@@ -126,14 +126,12 @@ Use template literals to do it.
 console.log("Task 8----");
 
 let user = {
-    name: "Moiz",
-    dep: "CS",
-    cgpa: 3.8,
+    name : "Moiz Ali Siddiqui",
+    department : "CS",
+    cgpa : 3.89
 };
 
-let message = `${user.name} from ${user.dep} department has a CGPA of ${user.cgpa}`;
-console.log(message);
-
+console.log(`${user.name} from ${user.department} department has a CGPA of ${user.cgpa}!`);
 /*Task 9: Make a variable lang = "JavaScript" and print:
 
 "I love learning JavaScript!"
@@ -157,9 +155,9 @@ Try setting email = "moiz@email.com" and see what changes*/
 
 console.log("Task 10----");
 
-let email = "Moiz@email.com";
+let email = "moizalisiddiqui@gmail.com"
 
-if(email){
+if(email) {
     console.log("Email entered");
 } else {
     console.log("No email provided");
@@ -171,15 +169,12 @@ if(email){
 
 console.log("Practice project----");
 
-let name = "Moiz";
-let marks1= {
-    Eng: 88,
-    Maths: 91,
-    Sci: 79,
-};
+let name1 = "Moiz";
+let marks1 = [88, 85, 82];
+let total1 = marks1.reduce((sum, current) => sum + current, 0);
+let average1 = total1 / marks1.length;
 
-let average1 = (marks1.Eng + marks1.Maths + marks1.Sci)/3
+let grade = average1 >= 90 ? "A" : average1 >= 84 ? "A-" :average1 >= 80 ? "B+" : average1 >= 75 ? "B-" : average1 >= 70 ? "C+" : "D";
 
-let grade = average1 >= 90 ? "A" : average1 >= 80 ? "A-" : average1 >= 70 ? "B": "C" ;
 
-console.log(`${name}, your average is ${average1.toFixed(2)}. You got an ${grade} grade`);
+console.log(`${name1}, your average is ${average1.toFixed(2)}. You got an ${grade} grade`)
