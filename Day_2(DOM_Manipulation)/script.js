@@ -1,8 +1,6 @@
-const message = document.getElementById("message");
-const textChange = document.getElementById("changeText");
+const togglebtn = document.getElementById("togglebtn");
 
-textChange.addEventListener("click", () => {
-    message.style.color = "red";
-    document.body.style.backgroundColor = "#f0f8ff";
-});
-
+togglebtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");  
+}
+);
